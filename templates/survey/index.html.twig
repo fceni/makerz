@@ -3,18 +3,31 @@
 {% block title %}Hello SurveyController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <title>Compte à Rebours d'un Mois</title>
+    <br>
+    <div class="countdown">
+        <span id="days">00</span> jour
+        <span id="hours">00</span> heures
+        <span id="minutes">00</span> minutes
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <script>
+        var timeRemaining = "{{ timeRemaining }}";
+        function updateCountDown(){
+            //
+            var parts = timeRemaining.split(' ');
+            var days = parseInt(parts[0], 10);
+            var hours = parseInt(parts[2], 10);
+            var minutes = parseInt(parts[4], 10);
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/makerz/src/Controller/SurveyController.php'|file_link(0) }}">src/Controller/SurveyController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/makerz/templates/survey/index.html.twig'|file_link(0) }}">templates/survey/index.html.twig</a></code></li>
-    </ul>
-</div>
+            document.getElementById('day').textContent = days + ' jours';
+            document.getElementById('hour').textContent = hours + ' heures';
+            document.getElementById('munite').textContent = minutes + ' minutes';
+        }
+
+        updateCountDown();
+
+    </script>
+
+
 {% endblock %}
