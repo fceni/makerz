@@ -15,6 +15,7 @@ pour installer ce projet, suivez les étapes suivantes :
 9. migrer les données : php bin/console doctrine:migration:migrate
 
 ## utilisation
+demarrer le projet : symfony server:start
 
 ## contribution
 les contributions viennent de ....(participant au stage)
@@ -34,3 +35,11 @@ composer -v
 
 ## ressources
 liens vers composer, ...lien vers le cli symfony...
+
+## console
+pour debuter le projet faite les lignes de commandes suivantes :
+composer install
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migration:migrate
+php bin/console doctrine:fixtures:load
