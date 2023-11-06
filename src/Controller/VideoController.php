@@ -7,9 +7,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+#[Route('/video')]
 class VideoController extends AbstractController
 {
-    #[Route('/video', name: 'app_video')]
+    #[Route('/', name: 'app_video')]
     public function index(): Response
     {
         return $this->render('video/index.html.twig', [
@@ -17,13 +18,13 @@ class VideoController extends AbstractController
         ]);
     }
 
-    #[Route('/videoThree', name: 'app_videoThree')]
-    public function topThree(VideoRepository $videoRepository) : Response{
-        $videos = $videoRepository->findTopThree();
-        dump($videos);
-        return $this->render('home/index.html.twig',[
-            'videos'=>$videos,
-        ]);
-    }
+//    #[Route('/three', name: 'app_video_three')]
+//    public function topThree(VideoRepository $videoRepository) : Response{
+//        $videos = $videoRepository->findTopThree();
+//        dump($videos);
+//        return $this->render('home/index.html.twig',[
+//            'videos'=>$videos,
+//        ]);
+//    }
 
 }
