@@ -6,19 +6,10 @@ use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+
 
 class AppFixtures extends Fixture
 {
-//    public function load(ObjectManager $manager): void
-//    {
-//        // $product = new Product();
-//        // $manager->persist($product);
-//
-//        $manager->flush();
-//    }
-
 
 private $passWordHasher;
 
@@ -44,11 +35,6 @@ public function load(ObjectManager $manager)
         $user->setCompany($userData['company']);
 
         $manager->persist($user);
-
-//        $user->setFirstName('john');
-//        $user->setLastName('doe');
-//        $user->setCompany('giants');
-
 
 
     }
