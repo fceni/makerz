@@ -2,10 +2,13 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    text-align: center;
+h1, h2, h3, h4 {
+    margin-top: 0;
 }
 
+.title_h2_home{
+    text-align: center;
+}
 
 .home-button {
     display: inline-block;
@@ -134,9 +137,6 @@ img {
     min-width: 140px;
 }
 
-h1, h2, h3, h4 {
-    margin-top: 0;
-}
 
 body > .container {
     display: flex;
