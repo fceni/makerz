@@ -43,7 +43,7 @@
                         </video>
                         <br>
                         <button class="btn-vote" onclick="vote('{{ video.id }}')">Votez pour la vidéo {{ video.Title }}</button>
-                        <p>Texte</p>
+                        <p>{{ video.description }}</p>
                     {% endfor %}
                 </div>
 
