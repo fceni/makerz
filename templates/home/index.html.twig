@@ -6,17 +6,17 @@
 
 {% block body %}
 
-    <div class="container ">
+    <div class="container">
         <div class="row">
             <div class="col col-sm col-md">
-                <h1>Bonjour </h1>
+                <h1>Hey John !! </h1>
 
-
+                <div>{{ "now" | date('Y-m-d')}} </div>
                 <h2> Vote pour ta video preferée du mois !!</h2>
 
 
 
-                <div>{{ "now" | date('Y-m-d')}} </div>
+{#                <div>{{ "now" | date('Y-m-d')}} </div>#}
                 <br>
 
 
@@ -43,7 +43,7 @@
                         </video>
                         <br>
                         <button class="btn-vote" onclick="vote('{{ video.id }}')">Votez pour la vidéo {{ video.Title }}</button>
-                        <p>Texte</p>
+                        <p>Pour explorer les meilleures tactiques pour rédiger des descriptions YouTube, j’ai discuté avec Eric Peters, Senior Manager of Growth Marketing au sein de l’équipe HubSpot Academy. Il m’a dit, “[YouTube descriptions] c’est l’un des principaux moyens par lesquels YouTube sait de quoi parle votre vidéo.</p>
                     {% endfor %}
                 </div>
 
